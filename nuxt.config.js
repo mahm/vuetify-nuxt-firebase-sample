@@ -1,6 +1,17 @@
 
 module.exports = {
   /*
+  ** Environments
+  */
+  env: {
+    APIKEY: process.env.APIKEY,
+    AUTHDOMAIN: process.env.AUTHDOMAIN,
+    DATABASEURL: process.env.DATABASEURL,
+    PROJECTID: process.env.PROJECTID,
+    STORAGEBUCKET: process.env.STORAGEBUCKET,
+    MESSAGINGSENDERID: process.env.MESSAGINGSENDERID
+  },
+  /*
   ** Headers of the page
   */
   head: {
@@ -15,9 +26,14 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: [
+    '~/plugins/vuetify.js'
+  ],
   css: [
     '~/assets/style/app.styl'
+  ],
+  modules: [
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Customize the progress bar color
